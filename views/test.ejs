@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Water Quality</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .test-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 30vh; /* Adjust height if needed */
+    }
+
+    .test-button-container {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Space between image and button */
+    }
+
+    .report-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 40vh; /* Adjust height if needed */
+      margin-top: 10px; /* Reduced space between the buttons */
+      visibility: hidden; /* Hide initially */
+    }
+
+    .test-button, .report-button {
+      padding: 15px 30px;
+      background-color: #00a7cc;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .test-button:hover,
+    .report-button:hover {
+      background-color: #004d99;
+    }
+
+    .test-image {
+      width: 150px; /* Adjust size as needed */
+      height: 150px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="site-title" style="font-size: 40px;">ECO AQUA</h1>
+    <nav>
+      <ul>
+        <li><a href="/">🏠 Home</a></li>
+        <li><a href="/sensors">🧪 Sensors</a></li>
+        <li class="dropdown">
+          <a href="/parameters">💧 Water Parameters</a>
+          <div class="dropdown-content">
+            <a href="/parameters">Drinking</a>
+            <a href="/parameters/turbidity">Agriculture</a>
+            <a href="/parameters/hardness">Construction</a>
+            <a href="/parameters/chlorine">Electricity</a>
+            <a href="/parameters/temperature">Domestic Usage</a>
+            <a href="/parameters/industry">Industry</a>
+          </div>
+        </li>
+        <li><a href="/standards">📊 Water Quality Standards</a></li>
+        <li><a href="/reports">📋 Water Quality Reports</a></li>
+        <li><a href="/about">ℹ️ About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="test-container">
+      <div class="test-button-container">
+        <img src="https://www.shutterstock.com/image-vector/water-analysis-by-business-people-260nw-1881421510.jpg" alt="Test Icon" class="test-image">
+        <button class="test-button" onclick="startTest()">Start Test</button>
+      </div>
+    </div>
+    <div class="report-container" id="report-container">
+      <button class="report-button" onclick="getReport()">Get Report</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Water Testing Service. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:info@watertesting.com">info@watertesting.com</a></p>
+  </footer>
+
+  <script>
+    function startTest() {
+      document.getElementById('report-container').style.visibility = 'visible'; // Show the "Get Report" button
+    }
+
+    function getReport() {
+      // Add your code to handle getting the report here
+      alert('Report button clicked');
+    }
+  </script>
+</body>
+
+</html>
